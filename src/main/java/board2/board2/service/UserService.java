@@ -22,7 +22,7 @@ public class UserService implements UserDetailsService {
     @throws UsernameNotFoundException -> 유저 없을때 예외
      */
 
-    @Override
+    @Override  //유저 없을 때 예외 처리
     public User loadUserByUsername(String email) throws UsernameNotFoundException {
         return userRepository.findByEmail(email)
                 .orElseThrow(() -> new UsernameNotFoundException((email)));

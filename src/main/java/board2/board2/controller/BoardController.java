@@ -64,7 +64,7 @@ public class BoardController {
         return "board/update";
     }
 
-    //put메소드로 게시물 수정 적용
+    //put메핑으로 게시물 수정 적용
     @PutMapping("/post/edit/{no}")
     public String update(BoardDto boardDto) {
         boardService.savePost(boardDto);
